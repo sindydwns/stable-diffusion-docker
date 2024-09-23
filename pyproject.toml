@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "stable-diffusion-docker"
+version = "0.1.0"
+description = ""
+authors = ["sindydwns <sindydwns@naver.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+torch = "^2.4.1"
+torchvision = "^0.19.1"
+torchaudio = "^2.4.1"
+diffusers = "^0.30.3"
+transformers = "^4.44.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
