@@ -5,3 +5,10 @@ services:
     volumes:
       - ~/.cache/pypoetry:/root/.cache/pypoetry
     command: [ "sleep", "infinity" ]
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]
