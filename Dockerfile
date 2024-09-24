@@ -12,7 +12,8 @@ COPY pyproject.toml poetry.lock* /app/
 
 WORKDIR /app
 
-RUN --mount=type=cache,target=/root/.cache/pypoetry \
+ARG DOCKER_CACHE_DIR
+RUN --mount=type=cache,target=/root/.cache \
     poetry config virtualenvs.create false \
     && poetry install --no-interaction --no-ansi
 

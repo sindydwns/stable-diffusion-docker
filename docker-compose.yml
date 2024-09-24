@@ -1,9 +1,10 @@
-version: "3"
 services:
   stable_diffusion_docker:
     build: .
+    env_file:
+      - .env
     volumes:
-      - ~/.cache/pypoetry:/root/.cache/pypoetry
+      - ${DOCKER_CACHE_DIR}:/root/.cache
     command: [ "sleep", "infinity" ]
     deploy:
       resources:
